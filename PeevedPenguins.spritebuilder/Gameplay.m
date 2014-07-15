@@ -13,6 +13,7 @@
     CCNode *_levelNode;
     CCNode *_catapultArm;
     CCNode *_contentNode;
+    CCNode *_pullbackNode;
 }
 
 // is called when CCB file has completed loading
@@ -22,6 +23,7 @@
     CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
     [_levelNode addChild:level];
     _physicsNode.debugDraw = TRUE;
+    _pullbackNode.physicsBody.collisionMask = @[];
 }
 
 // called on every touch in this scene
