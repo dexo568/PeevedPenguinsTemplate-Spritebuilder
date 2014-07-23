@@ -124,7 +124,7 @@
         
         // after snapping rotation is fine
         _currentPenguin.physicsBody.allowsRotation = TRUE;
-        
+        _currentPenguin.launched = TRUE;
         // follow the flying penguin
         _followPenguin = [CCActionFollow actionWithTarget:_currentPenguin worldBoundary:self.boundingBox];
         [_contentNode runAction:_followPenguin];
@@ -140,7 +140,6 @@
 -(void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
     // when touches are cancelled, meaning the user drags their finger off the screen or onto something else, release the catapult
-    _currentPenguin.launched = TRUE;
     [self releaseCatapult];
 }
 
