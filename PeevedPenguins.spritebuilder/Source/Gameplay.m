@@ -64,6 +64,7 @@
 }
 
 - (void)nextAttempt {
+    CCLOG(@"REACHED NEXT ATTEMPT");
     _currentPenguin = nil;
     [_contentNode stopAction:_followPenguin];
     
